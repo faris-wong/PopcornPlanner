@@ -1,4 +1,4 @@
-.flexbox-container{
-    display: flex;
-    flex-direction: column;
+.flexbox-container {
+  display: flex;
+  flex-direction: column;
 }

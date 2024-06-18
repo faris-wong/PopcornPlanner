@@ -1,19 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const Login = (props) => {
   const handleLogin = () => {
-    props.userNameInput.current.focus();
+    const inputval = document.getElementById("name");
+    props.setName(inputval.value);
   };
 
   return (
     <div>
       <div>Welcome {props.name}</div>
-      <input
-        type="text"
-        value={props.name}
-        placeholder="Enter User"
-        ref={props.userNameInput}
-      ></input>
+      <input id="name" type="text" placeholder="Enter User"></input>
       <button onClick={handleLogin}>Log In</button>
     </div>
   );

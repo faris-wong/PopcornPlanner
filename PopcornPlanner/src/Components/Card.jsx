@@ -7,7 +7,13 @@ const Card = (props) => {
       <img src={props.poster}></img>
       <div>Title: {props.title}</div>
       <div>Rating: {props.rating}</div>
-      <button>Add to MyList</button>
+      <button
+        onClick={() =>
+          props.addList(props.id, props.title, props.rating, props.poster)
+        }
+      >
+        Add to MyList
+      </button>
     </div>
   );
 };

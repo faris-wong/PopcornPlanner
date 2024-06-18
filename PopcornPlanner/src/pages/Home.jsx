@@ -8,7 +8,9 @@ const Home = (props) => {
       <div>
         {props.movies.map((item) => (
           <Card
+            addList={props.addList}
             key={item.id}
+            id={item.id}
             title={item["original_title"]}
             rating={item["vote_average"]}
             poster={`https://image.tmdb.org/t/p/w500` + item["poster_path"]}
