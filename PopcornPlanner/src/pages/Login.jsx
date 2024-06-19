@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import styles from "./Login.module.css"
 
 const Login = (props) => {
   const handleLogin = () => {
@@ -7,8 +8,7 @@ const Login = (props) => {
   };
 
   return (
-    <div>
-      <div>Welcome {props.name}</div>
+    <div className={styles.container}>
       <input id="name" type="text" placeholder="Enter User"></input>
       <button onClick={handleLogin}>Log In</button>
     </div>

@@ -1,15 +1,16 @@
 .border {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 1000px;
-}
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 1000px;
+  }
+  
 
 .cards {
-  margin: auto;
   border: 4px solid white;
   border-radius: 5%;
+  display: flex;
 }
 
 .button {
@@ -59,10 +60,3 @@
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
 }
-
-
-
-
-  .overlay:hover    {
-opacity: 0;
-  }

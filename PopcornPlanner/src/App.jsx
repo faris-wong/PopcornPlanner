@@ -36,7 +36,7 @@ const App = () => {
   const getList = async () => {
     try {
       const response = await fetch(
-        "https://api.airtable.com/v0/appa8TOXF3jwz74S8/Table%201?maxRecords=3&view=Grid%20view",
+        "https://api.airtable.com/v0/appa8TOXF3jwz74S8/Table%201",
         {
           method: "GET",
           headers: {
@@ -51,6 +51,7 @@ const App = () => {
         throw new Error("fetch error");
       }
       const list = await response.json();
+      console.log(list.records);
       setList(list.records);
     } catch (error) {
       console.log(error.message);
@@ -112,7 +113,12 @@ const App = () => {
           <Route
             path="myList"
             element={
-              <MyList list={list} getList={getList} setList={setList}></MyList>
+              <MyList
+                list={list}
+                getList={getList}
+                setList={setList}
+                name={name}
+              ></MyList>
             }
           ></Route>
         </Routes>

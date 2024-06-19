@@ -1,14 +1,11 @@
-body {
-  color: white;
-  font-size: 30px;
-}
-
-.flex {
-  display: flex;
-}
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   align-items: center;
+}
+
+
+.name {
+  font-size: 100px;
 }

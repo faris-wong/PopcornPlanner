@@ -4,8 +4,8 @@ import styles from "./Home.module.css";
 
 const Home = (props) => {
   return (
-    <div className="flex-container">
-      <div>
+    <div className={styles.flex}>
+      <div className={styles.container}>
         {props.movies.map((item) => (
           <Card
             addList={props.addList}
@@ -14,6 +14,7 @@ const Home = (props) => {
             title={item["original_title"]}
             rating={item["vote_average"]}
             poster={`https://image.tmdb.org/t/p/w500` + item["poster_path"]}
+            synopsis={item["overview"]}
           ></Card>
         ))}
       </div>
