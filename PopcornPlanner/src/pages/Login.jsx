@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import styles from "./Login.module.css"
+import styles from "./Login.module.css";
 
 const Login = (props) => {
   const handleLogin = () => {

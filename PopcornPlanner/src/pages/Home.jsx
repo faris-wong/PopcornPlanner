@@ -3,6 +3,19 @@ import Card from "../Components/Card";
 import styles from "./Home.module.css";
 
 const Home = (props) => {
+  const handlePageChange = (event, page) => {
+    if ((event.target = document.getElementById("back"))) {
+      if (page === 1) {
+        props.setPage(1);
+      } else {
+        props.setPage(props.page - 1);
+      }
+    }
+    if ((event.target = document.getElementById("next"))) {
+      props.setPage(props.page + 1);
+    }
+  };
+
   return (
     <div className={styles.flex}>
       <div className={styles.container}>
@@ -17,6 +30,26 @@ const Home = (props) => {
             synopsis={item["overview"]}
           ></Card>
         ))}
+      </div>
+      <div className={styles.button}>
+        <button
+          id="back"
+          className={styles.buttonleft}
+          onClick={(event) => {
+            handlePageChange(event, props.page);
+          }}
+        >
+          BACK
+        </button>
+        <button
+          id="next"
+          className={styles.buttonright}
+          onClick={(event) => {
+            handlePageChange(event, props.page);
+          }}
+        >
+          NEXT
+        </button>
       </div>
     </div>
   );

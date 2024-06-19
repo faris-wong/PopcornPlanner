@@ -14,7 +14,7 @@ const Card = (props) => {
         <div className={styles.overlay}>{props.synopsis}</div>
       </div>
 
-      <div>Title: {props.title}</div>
+      <div>{props.title}</div>
       <div>Rating: {props.rating}</div>
       <button
         onClick={() =>

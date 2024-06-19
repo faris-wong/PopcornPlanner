@@ -33,18 +33,18 @@ const MyList = (props) => {
     <>
       <div className={styles.name}>{props.name}'s list</div>
       <div className={styles.flex}>
-      <div className={styles.container}>
-        {props.list.map((item) => (
-          <ListCard
-            id={item.id}
-            key={item.id}
-            title={item["fields"]["title"]}
-            rating={item["fields"]["rating"]}
-            poster={item["fields"]["poster_url"]}
-            deleteList={deleteList}
-          ></ListCard>
-        ))}
-      </div>
+        <div className={styles.container}>
+          {props.list.map((item) => (
+            <ListCard
+              id={item.id}
+              key={item.id}
+              title={item["fields"]["title"]}
+              rating={item["fields"]["rating"]}
+              poster={item["fields"]["poster_url"]}
+              deleteList={deleteList}
+            ></ListCard>
+          ))}
+        </div>
       </div>
     </>
   );

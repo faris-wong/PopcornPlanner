@@ -11,12 +11,22 @@ const App = () => {
   const [movies, setMovies] = useState([]); // fetching from database
   const [name, setName] = useState("");
   const [list, setList] = useState([]);
+  const [page, setPage] = useState(1);
 
   const getData = async () => {
     try {
       const response = await fetch(
-        import.meta.env.VITE_SERVER + import.meta.env.VITE_API_KEY
-        // `https://api.themoviedb.org/3/movie/top_rated?api_key=85e95598f45fa1650e9455d8eb56d6d7`
+        `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=` +
+          page,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${
+              import.meta.env.VITE_API_READ_ACCESS_TOKEN
+            }`,
+          },
+        }
       );
 
       if (!response.ok) {
@@ -31,7 +41,7 @@ const App = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [page]);
 
   const getList = async () => {
     try {
@@ -107,6 +117,8 @@ const App = () => {
                 setList={setList}
                 getList={getList}
                 addList={addList}
+                setPage={setPage}
+                page={page}
               ></Home>
             }
           ></Route>

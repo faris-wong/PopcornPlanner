@@ -5,6 +5,7 @@ body {
 
 .flex {
   display: flex;
+  flex-direction: column;
 }
 .container {
   display: grid;
@@ -12,4 +13,18 @@ body {
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   align-items: center;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.buttonleft {
+  margin-left: 100px;
+  margin-bottom: 70px;
+}
+.buttonright {
+  margin-right: 100px;
+  margin-bottom: 70px;
 }
