@@ -8,6 +8,7 @@ body {
 }
 .container {
   display: grid;
+  width: 100vw;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   align-items: center;

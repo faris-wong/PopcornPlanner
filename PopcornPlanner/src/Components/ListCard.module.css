@@ -1,11 +1,10 @@
 .border {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 1000px;
-  }
-  
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 1000px;
+}
 
 .cards {
   border: 4px solid white;

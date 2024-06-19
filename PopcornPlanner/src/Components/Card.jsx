@@ -9,10 +9,10 @@ const Card = (props) => {
 
   return (
     <div className={styles.border}>
-      <div className={styles.overlay}>{props.synopsis}</div>
-        <div><img src={props.poster} className={styles.cards}></img></div>
-        
-    
+      <div className={styles.cards}>
+        <img className={styles.poster} src={props.poster}></img>
+        <div className={styles.overlay}>{props.synopsis}</div>
+      </div>
 
       <div>Title: {props.title}</div>
       <div>Rating: {props.rating}</div>
