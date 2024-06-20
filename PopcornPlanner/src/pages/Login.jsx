@@ -31,7 +31,6 @@ const Login = (props) => {
         <input id="name" type="text" placeholder="Enter User"></input>
         <button onClick={handleLogin}>Log In</button>
       </div>
-      <img src="../popcom111.png"></img>
     </>
   );
 };

@@ -28,4 +28,5 @@ npm i react-router-dom
 
 # Next Steps
 
-- Implement favourite list that is specific to user
+- Implement user specific favourite's list
+- Add search functionality
