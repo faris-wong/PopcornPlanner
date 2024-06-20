@@ -6,7 +6,7 @@ const ListCard = (props) => {
   return (
     <div className={styles.border}>
       <img src={src} className={styles.cards}></img>
-      <div>Title: {props.title}</div>
+      <div>{props.title}</div>
       <div>Rating: {props.rating}</div>
       <button
         onClick={() => props.deleteList(props.id)}

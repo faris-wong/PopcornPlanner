@@ -36,3 +36,7 @@
   padding-bottom: 0.25rem;
   border-bottom: 4px solid whitesmoke;
 }
+
+img {
+  object-fit: scale-down
+}

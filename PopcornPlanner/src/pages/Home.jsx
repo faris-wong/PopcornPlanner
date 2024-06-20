@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../Components/Card";
 import styles from "./Home.module.css";
 
@@ -9,12 +9,22 @@ const Home = (props) => {
         props.setPage(1);
       } else {
         props.setPage(props.page - 1);
+        document.documentElement.scrollTop = 0;
       }
     }
     if ((event.target = document.getElementById("next"))) {
       props.setPage(props.page + 1);
+      document.documentElement.scrollTop = 0;
     }
   };
+
+  useEffect(() => {
+    console.log("home mounts");
+
+    return () => {
+      console.log("home dismounts");
+    };
+  });
 
   return (
     <div className={styles.flex}>
@@ -38,18 +48,14 @@ const Home = (props) => {
           onClick={(event) => {
             handlePageChange(event, props.page);
           }}
-        >
-          BACK
-        </button>
+        ></button>
         <button
           id="next"
           className={styles.buttonright}
           onClick={(event) => {
             handlePageChange(event, props.page);
           }}
-        >
-          NEXT
-        </button>
+        ></button>
       </div>
     </div>
   );

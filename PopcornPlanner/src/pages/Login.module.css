@@ -6,3 +6,7 @@ body {
   justify-content: center;
   margin-top: 600px;
 }
+
+img {
+  object-fit: fill;
+}

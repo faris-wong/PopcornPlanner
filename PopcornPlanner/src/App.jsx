@@ -12,6 +12,7 @@ const App = () => {
   const [name, setName] = useState("");
   const [list, setList] = useState([]);
   const [page, setPage] = useState(1);
+  const [navtitle, setNavtitle] = useState("My");
 
   const getData = async () => {
     try {
@@ -61,7 +62,6 @@ const App = () => {
         throw new Error("fetch error");
       }
       const list = await response.json();
-      console.log(list.records);
       setList(list.records);
     } catch (error) {
       console.log(error.message);
@@ -102,12 +102,19 @@ const App = () => {
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar setPage={setPage} name={name} navtitle={navtitle}></NavBar>
       <Suspense fallback={<p>Loading...</p>}>
         <Routes>
           <Route
             path="login"
-            element={<Login name={name} setName={setName}></Login>}
+            element={
+              <Login
+                name={name}
+                setName={setName}
+                navtitle={navtitle}
+                setNavtitle={setNavtitle}
+              ></Login>
+            }
           ></Route>
           <Route
             path="home"
