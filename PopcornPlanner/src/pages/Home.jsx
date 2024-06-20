@@ -20,14 +20,6 @@ const Home = (props) => {
     }
   };
 
-  useEffect(() => {
-    console.log("home mounts");
-
-    return () => {
-      console.log("home dismounts");
-    };
-  });
-
   return (
     <div className={styles.flex}>
       <div className={styles.container}>
