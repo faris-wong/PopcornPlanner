@@ -3,7 +3,7 @@ import Card from "../Components/Card";
 import styles from "./Home.module.css";
 
 const Home = (props) => {
-  const handlePageChange = (event, page) => {
+  const handlePageChangeBack = (event, page) => {
     if ((event.target = document.getElementById("back"))) {
       if (page === 1) {
         props.setPage(1);
@@ -12,6 +12,8 @@ const Home = (props) => {
         document.documentElement.scrollTop = 0;
       }
     }
+  };
+  const handlePageChangeFront = (event, page) => {
     if ((event.target = document.getElementById("next"))) {
       props.setPage(props.page + 1);
       document.documentElement.scrollTop = 0;
@@ -46,14 +48,14 @@ const Home = (props) => {
           id="back"
           className={styles.buttonleft}
           onClick={(event) => {
-            handlePageChange(event, props.page);
+            handlePageChangeBack(event, props.page);
           }}
         ></button>
         <button
           id="next"
           className={styles.buttonright}
           onClick={(event) => {
-            handlePageChange(event, props.page);
+            handlePageChangeFront(event, props.page);
           }}
         ></button>
       </div>
