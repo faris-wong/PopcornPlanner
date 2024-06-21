@@ -2,11 +2,6 @@ import React from "react";
 import styles from "./Card.module.css";
 
 const Card = (props) => {
-  // const [overlay, SetOverlay] = useState(false)
-  // const toggleOverlay = (event) => {
-
-  // }
-
   return (
     <div className={styles.border}>
       <div className={styles.cards}>
