@@ -6,11 +6,11 @@ PopcornPlanner is inspired by my love for cinema but never having enough time to
 
 **Home Page**
 
-![my screenshot](./public/homepage.gif)
+![my screenshot](PopcornPlanner/public/homepage.gif)
 
 **Favourites Page**
 
-![my screenshot](./public/screenshot_pp2.png)
+![my screenshot](PopcornPlanner/public/screenshot_pp2.png)
 
 # Technologies Used
 
